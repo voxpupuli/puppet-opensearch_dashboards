@@ -44,7 +44,7 @@ shared_examples 'install_package' do |parameter, facts|
           'cleanup'  => true,
           'source'   => "https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/#{parameter['version']}/#{file}",
         }
-      ).that_comes_before("Package[opensearch-dashboards]")
+      ).that_comes_before('Package[opensearch-dashboards]')
     }
   else
     ensure_value = if parameter['version'] == :undef
