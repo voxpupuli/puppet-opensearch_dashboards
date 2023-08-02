@@ -31,4 +31,32 @@ describe 'opensearch_dashboards' do
       it { is_expected.to be_grouped_into 'opensearch-dashboards' }
     end
   end
+
+  context 'uninstall' do
+    it 'uninstalls' do
+      apply_manifest(<<~PP, catch_failures: true)
+        package { 'opensearch-dashboards':
+          ensure => purged,
+        }
+      PP
+    end
+  end
+
+  context 'when installing from an archive' do
+    it_behaves_like 'an idempotent resource' do
+      let(:manifest) do
+        <<~PP
+          class { 'opensearch_dashboards':
+            version        => '2.9.0',
+            package_source => 'archive',
+          }
+        PP
+      end
+    end
+
+    describe service('opensearch-dashboards') do
+      it { is_expected.to be_enabled }
+      it { is_expected.to be_running }
+    end
+  end
 end

@@ -9,8 +9,9 @@ class opensearch_dashboards::service {
   if $opensearch_dashboards::manage_service {
     if $opensearch_dashboards::package_source == 'archive' {
       systemd::unit_file { 'opensearch-dashboards.service':
-        ensure => 'present',
-        source => "puppet:///modules/${module_name}/opensearch-dashboards.service",
+        ensure  => 'present',
+        content => epp('opensearch_dashboards/opensearch-dashboards.service.epp'),
+        notify  => Service['opensearch-dashboards'],
       }
     }
 

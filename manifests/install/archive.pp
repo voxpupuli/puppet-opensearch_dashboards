@@ -40,14 +40,12 @@ class opensearch_dashboards::install::archive {
     }
 
     archive { "/tmp/${file}":
-      provider        => 'wget',
-      path            => "/tmp/${file}",
       extract         => true,
       extract_path    => $opensearch_dashboards::package_directory,
-      extract_command => "tar -xvzf /tmp/${file} --wildcards opensearch-${opensearch_dashboards::version}/* -C ${opensearch_dashboards::package_directory}",
+      extract_command => "tar xf %s --strip-components 1 -C ${opensearch_dashboards::package_directory}",
       user            => 'opensearch-dashboards',
       group           => 'opensearch-dashboards',
-      creates         => "${opensearch_dashboards::package_directory}/bin",
+      creates         => "${opensearch_dashboards::package_directory}/bin/opensearch-dashboards",
       cleanup         => true,
       source          => "https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/${opensearch_dashboards::version}/${file}",
     }

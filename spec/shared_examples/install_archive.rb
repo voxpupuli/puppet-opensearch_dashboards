@@ -60,14 +60,12 @@ shared_examples 'install_archive' do |parameter|
 
       is_expected.to contain_archive("/tmp/#{file}").with(
         {
-          'provider'        => 'wget',
-          'path'            => "/tmp/#{file}",
           'extract'         => true,
           'extract_path'    => parameter['package_directory'],
-          'extract_command' => "tar -xvzf /tmp/#{file} --wildcards opensearch-#{parameter['version']}/* -C #{parameter['package_directory']}",
+          'extract_command' => "tar xf %s --strip-components 1 -C #{parameter['package_directory']}",
           'user'            => 'opensearch-dashboards',
           'group'           => 'opensearch-dashboards',
-          'creates'         => "#{parameter['package_directory']}/bin",
+          'creates'         => "#{parameter['package_directory']}/bin/opensearch-dashboards",
           'cleanup'         => true,
           'source'          => "https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/#{parameter['version']}/#{file}",
         }

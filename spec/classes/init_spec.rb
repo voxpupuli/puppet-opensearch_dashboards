@@ -10,7 +10,7 @@ describe 'opensearch_dashboards' do
         facts
       end
 
-      defaults = get_defaults(facts)
+      defaults = default_parameters
 
       TESTS.each do |title, params|
         context "with #{title}" do
