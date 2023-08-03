@@ -2,9 +2,9 @@
   "name": "puppet-opensearch_dashboards",
   "version": "1.0.1-rc0",
   "author": "Vox Pupuli",
-  "summary": "Puppet Module to setup opensearch",
+  "summary": "Puppet module to setup OpenSearch Dashboards",
   "license": "Apache-2.0",
-  "source": "https://github.com/voxpupuli/puppet-opensearch",
+  "source": "https://github.com/voxpupuli/puppet-opensearch_dashboards",
   "dependencies": [
     {
       "name": "puppetlabs/apt",
