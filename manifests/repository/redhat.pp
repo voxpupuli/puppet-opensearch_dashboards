@@ -13,6 +13,7 @@ class opensearch_dashboards::repository::redhat {
 
   yumrepo { 'opensearch-dashboards':
     ensure        => $opensearch_dashboards::repository_ensure,
+    descr         => 'OpenSearch Dashboards',
     baseurl       => $baseurl,
     repo_gpgcheck => '1',
     gpgcheck      => '1',
