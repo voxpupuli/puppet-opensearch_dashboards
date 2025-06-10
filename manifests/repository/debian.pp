@@ -7,7 +7,7 @@ class opensearch_dashboards::repository::debian {
   assert_private()
 
   $location = $opensearch_dashboards::version =~ Undef ? {
-    true  => pick($opensearch_dashboards::repository_location, 'https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/2.x/apt'),
+    true  => pick($opensearch_dashboards::repository_location, 'https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/3.x/apt'),
     false => pick($opensearch_dashboards::repository_location, "https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/${opensearch_dashboards::version[0]}.x/apt"),
   }
 
