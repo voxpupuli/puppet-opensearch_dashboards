@@ -15,6 +15,7 @@ class opensearch_dashboards::repository::redhat {
     ensure        => $opensearch_dashboards::repository_ensure,
     descr         => 'OpenSearch Dashboards',
     baseurl       => $baseurl,
+    enabled       => '1',
     repo_gpgcheck => '1',
     gpgcheck      => '1',
     gpgkey        => $opensearch_dashboards::repository_gpg_key,
