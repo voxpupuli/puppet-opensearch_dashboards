@@ -136,7 +136,7 @@ Data type: `Stdlib::HTTPUrl`
 
 The GnuPG key of the repository
 
-Default value: `'https://artifacts.opensearch.org/publickeys/opensearch.pgp'`
+Default value: `'https://artifacts.opensearch.org/publickeys/opensearch-release.pgp'`
 
 ##### <a name="-opensearch_dashboards--manage_config"></a>`manage_config`
 

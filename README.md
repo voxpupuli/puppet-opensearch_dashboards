@@ -49,7 +49,7 @@ class { 'opensearch_dashboards':
 
 ```puppet
 class { 'opensearch_dashboards':
-  version => '2.6.0',
+  version => '3.2.0',
 }
 ```
 
