@@ -31,7 +31,7 @@ shared_examples 'config' do |parameter, _facts|
           'group'   => 'opensearch-dashboards',
           'mode'    => '0640',
           'content' => settings.to_yaml,
-        }
+        },
       )
     }
   end

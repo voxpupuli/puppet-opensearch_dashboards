@@ -13,7 +13,7 @@ shared_examples 'install_archive' do |parameter|
         'managehome' => false,
         'system'     => true,
         'shell'      => '/bin/false',
-      }
+      },
     )
   }
 
@@ -24,7 +24,7 @@ shared_examples 'install_archive' do |parameter|
           'ensure' => 'directory',
           'owner'  => 'opensearch-dashboards',
           'group'  => 'opensearch-dashboards',
-        }
+        },
       )
     }
 
@@ -34,7 +34,7 @@ shared_examples 'install_archive' do |parameter|
           'ensure' => 'directory',
           'owner'  => 'opensearch-dashboards',
           'group'  => 'opensearch-dashboards',
-        }
+        },
       )
     }
 
@@ -44,7 +44,7 @@ shared_examples 'install_archive' do |parameter|
           'ensure' => 'directory',
           'owner'  => 'opensearch-dashboards',
           'group'  => 'opensearch-dashboards',
-        }
+        },
       )
     }
 
@@ -68,7 +68,7 @@ shared_examples 'install_archive' do |parameter|
           'creates'         => "#{parameter['package_directory']}/bin/opensearch-dashboards",
           'cleanup'         => true,
           'source'          => "https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/#{parameter['version']}/#{file}",
-        }
+        },
       )
     }
   else
@@ -78,7 +78,7 @@ shared_examples 'install_archive' do |parameter|
           'ensure'  => parameter['package_ensure'],
           'recurse' => true,
           'force'   => true,
-        }
+        },
       )
     }
 
@@ -88,7 +88,7 @@ shared_examples 'install_archive' do |parameter|
           'ensure'  => parameter['package_ensure'],
           'recurse' => true,
           'force'   => true,
-        }
+        },
       )
     }
 
@@ -98,7 +98,7 @@ shared_examples 'install_archive' do |parameter|
           'ensure'  => parameter['package_ensure'],
           'recurse' => true,
           'force'   => true,
-        }
+        },
       )
     }
   end
