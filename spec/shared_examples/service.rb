@@ -11,8 +11,8 @@ shared_examples 'service' do |parameter, _facts|
         is_expected.to contain_systemd__unit_file('opensearch-dashboards.service').with(
           {
             'ensure' => 'present',
-            'content' => %r{^ExecStart=/opt/opensearch-dashboards/bin/opensearch-dashboards$}
-          }
+            'content' => %r{^ExecStart=/opt/opensearch-dashboards/bin/opensearch-dashboards$},
+          },
         )
       }
     end
@@ -22,7 +22,7 @@ shared_examples 'service' do |parameter, _facts|
         {
           'ensure' => parameter['service_ensure'],
           'enable' => parameter['service_enable'],
-        }
+        },
       )
     }
   end
