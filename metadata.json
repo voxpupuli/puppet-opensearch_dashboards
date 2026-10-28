@@ -1,6 +1,6 @@
 {
   "name": "puppet-opensearch_dashboards",
-  "version": "1.0.1-rc0",
+  "version": "2.0.0",
   "author": "Vox Pupuli",
   "summary": "Puppet module to setup OpenSearch Dashboards",
   "license": "Apache-2.0",
