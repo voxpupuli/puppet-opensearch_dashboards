@@ -193,4 +193,3 @@ Data type: `Boolean`
 Restart the service on package changes
 
 Default value: `true`
-
