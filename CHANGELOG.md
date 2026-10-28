@@ -4,7 +4,32 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
-## [v1.0.0](https://github.com/voxpupuli/puppet-opensearch_dashboards/tree/v1.0.0) (2023-08-02)
+## [v2.0.0](https://github.com/voxpupuli/puppet-opensearch_dashboards/tree/v2.0.0) (2026-10-28)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-opensearch_dashboards/compare/v1.0.0...v2.0.0)
+
+**Breaking changes:**
+
+- Drop puppet, update openvox minimum version to 8.19 [\#24](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/24) ([TheMeier](https://github.com/TheMeier))
+
+**Implemented enhancements:**
+
+- puppet/systemd: Allow 11.x [\#37](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/37) ([bastelfreak](https://github.com/bastelfreak))
+- Update requirements to allow OpenVox 9 [\#35](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/35) ([sebastianrakel](https://github.com/sebastianrakel))
+- Add support for Debian 12 [\#26](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/26) ([smortex](https://github.com/smortex))
+- puppet/archive: Allow 8.x [\#23](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/23) ([TheMeier](https://github.com/TheMeier))
+- Allow puppetlabs/apt 10.x [\#20](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/20) ([smortex](https://github.com/smortex))
+- metadata.json: Add OpenVox [\#19](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/19) ([jstraw](https://github.com/jstraw))
+- puppet/systemd: allow 8.x [\#16](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/16) ([jay7x](https://github.com/jay7x))
+- puppet/systemd: Allow 7.x [\#10](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/10) ([TheMeier](https://github.com/TheMeier))
+- puppetlabs/systemd: Allow 6.x [\#8](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/8) ([zilchms](https://github.com/zilchms))
+
+**Fixed bugs:**
+
+- Add a name to the yum repository [\#5](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/5) ([smortex](https://github.com/smortex))
+- Fix module metadata [\#3](https://github.com/voxpupuli/puppet-opensearch_dashboards/pull/3) ([smortex](https://github.com/smortex))
+
+## [v1.0.0](https://github.com/voxpupuli/puppet-opensearch_dashboards/tree/v1.0.0) (2023-08-03)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-opensearch_dashboards/compare/eae49d715e39fcb51360c04095c569e322b29e69...v1.0.0)
 
